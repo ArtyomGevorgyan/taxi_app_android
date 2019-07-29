@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.gevart.taxiapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/taxi_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/taxi_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".driver.DriverSettingsActivity"
+            android:parentActivityName=".driver.DriverMapsActivity" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".driver.DriverMapsActivity"/>
+        </activity>
+        <activity
+            android:name=".passenger.PassengerSettingsActivity"
+            android:parentActivityName=".passenger.PassengerMapsActivity" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".passenger.PassengerMapsActivity"/>
+        </activity>
+        <activity
+            android:name=".driver.DriverAboutActivity"
+            android:parentActivityName=".driver.DriverMapsActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".driver.DriverMapsActivity"/>
+        </activity>
+        <activity
+            android:name=".passenger.PassengerAboutActivity"
+            android:parentActivityName=".passenger.PassengerMapsActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".passenger.PassengerMapsActivity"/>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".passenger.PassengerMapsActivity"
+            android:label="@string/title_activity_passenger_maps"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".driver.DriverMapsActivity"
+            android:label="@string/title_activity_driver_maps"
+            android:launchMode="singleTop"/>
+        <activity android:name=".driver.DriverSignInActivity" />
+        <activity android:name=".passenger.PassengerSignInActivity" />
+        <activity android:name=".ChooseModeActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

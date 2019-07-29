@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TaxiApp</string>
+    <string name="title_activity_driver_maps">Map</string>
+    <string name="title_activity_passenger_maps">Map</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+
+</resources>

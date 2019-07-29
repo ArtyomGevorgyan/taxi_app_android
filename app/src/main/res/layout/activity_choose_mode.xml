@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseModeActivity" >
+
+    <ImageView
+        android:src="@drawable/choose_image"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:text="Taxi App"
+            android:ellipsize="marquee"
+            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/passengerButton"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="I'm a passenger"
+            android:textSize="25sp"
+            android:layout_marginTop="200dp"
+            android:onClick="goToPassengerSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/driverButton"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
+            android:text="I'm a driver"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:onClick="goToDriverSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>
